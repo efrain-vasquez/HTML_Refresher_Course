@@ -1,0 +1,68 @@
+<!-- In almost every single web page you will see something called a meta tag.
+Even though you cant see a meta tag they play an important role in how search engines
+and web browsers display page results and mark up. The meta tag has two required attributes,
+one is the name for the meta tag and the other is the content for the meta tag.
+The name of the meta tag tells the browser or search engine what kind of meta tag it is.
+
+One important meta tag attribute is the name="" it can have a keywords property, it is used by search engines such as google to 
+quickly extract some keywords that describe the page. The content attribute contains the keywords which 
+should be sepaerated by commas. 
+
+There is also another name tag attribute called description 
+which when paired with the content attribute can give a description of the web page. 
+
+Another important meta tag that should also be included is charset="" and  charset="" tells the browser what format 
+to use to read the web page a very common format is utf-8. In versions prior to HTML5 you would have
+seen this meta tag used instead <meta http-equiv="content-type" content="text/html" charset="utf-8">.
+For compatibility reasons you could write <meta http-equiv="content-type" content="text/html; charset=utf-8">
+for web browsers that are able to read HTML5. 
+
+The next meta tag is name=viewport viewport is 
+not in quotations because it is a global variable inside of HTML. This meta tag is very 
+important because it is about mobile device support. This is the meta tag that google uses to determine 
+a very a very basic level of mobile support for your web page, in fact if you dont include this meta tag 
+your web page will be ranked lower on the search engine rankings compared to other web pages 
+that do have this meta tag especially on mobile devices. The content for this meta tag is 
+content="width-device-width, initial-scale=1.0". 
+
+The title is also a meta tag. So google reads the title
+tag as an important meta tag when displaying search results. 
+
+The link tag is another common tag.
+With the link tag you will usually see the attribute rel="stylesheet" and generally if it is the 
+stylesheet you will see it accompanied with an href="" pointing to the stylesheet usually styles.css
+this is how you add a stylessheet to a web page from a seperate file. You can link to multiple css files 
+using this link tag. When you do this the style sheet that is linked to last overwrites any stylesheet
+that is linked to first so generally you want to add your own custom style sheet at the very end.
+
+Another tag you are likely to see in the head is the script tag which is not a self closing tag.
+With the script tag there are two things you can do, you can add JS inside of the script tag
+but if you dont want to write in line scripts you can also refer to another JS file using the src=""
+inside the opening script tag i.e. <script src="">. The src property can link to an external JS file
+and the src property can also link to local JS files.
+
+CSS and JS
+
+The presentation of a web page is CSS. JS is used to handle user actions or interactions with the web page.
+When ever you work with data CSS and HTML do not handle that very well, CSS and HTML give us the info 
+and show us how it looks and can style it really well but when ever your working with data thats when you
+need to work with a more complete programing language like JS in order to really show some data in a way that
+users can read. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="html, web, course">
+    <meta name="description" content="This web page describes some common tags found in the head of an html page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="http://bootstrap.css" />
+    <title>Elements in the Head</title>
+  </head>
+  <body>
+      
+  </body>
+</html>
