@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HTML5 Multimedia</title>
+  </head>
+  <body>
+    <h1>
+      Audio Files in HTML
+    </h1>
+    <!-- flac is a lossless compression format music compressed with flac sounds
+    significantly better than ph audio files. You have to specify a controls
+    attribute when playing audio files, thats how the controls show up,
+    otherwise you really wont be able to do anything with the audio file.
+    another property you can specify is loop so once the music ends it will
+    start playing again. You can also specify the property autoplay to
+    automatically start the music once the page loads but most times this is
+    annoying to the user. -->
+    <audio src="/audio/inconsciente.m4a" controls loop>
+      Your browser doesn't support audio files
+    </audio>
+
+    <!-- Why are the audio and video tags not self closing? 
+    In case someone is not using a browser that doesnt support HTML5 yet. -->
+    <h1>Video Files in HTML5</h1>
+    <video
+      src="/video/FriendlyFinancingApplication-6.ogv"
+      controls
+      height="300"
+    >
+      Your browser doesn't support the latest web standards.
+    </video>
+    <!-- How did browsers show audio and video before these tags made it so easy? 
+    For all other multimedia content all other file formats such as 
+    animations or flash or pdf or svg's which are stored as raw shapes inside HTML
+    are iframe tag also the embed tag (which is self closing). The third tag is the object tag
+    which does not specify source but rather data. There is subtle differences between these three tags.
+    Really it comes down to what the provider (such as youtube or google) of the content recommends.
+    When it comes to embed object the difference becomes mush more subtler because they essentially
+    do the same thing. embed is used much less frequently even today because object allows you a fallback
+    text incase your browser does not support an object tag which is rare.
+    -->
+    <h1>Everything else</h1>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/q1ZWSYpH-Zc"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+
+    <!-- <embed src="" type="" /> -->
+
+    <br />
+    <br />
+    <object
+      data="/othermultimedia/resume.pdf"
+      type="application/pdf"
+      width="600"
+      height="100%"
+    >
+      Fallback text in case your browser does not support this
+    </object>
+  </body>
+</html>
