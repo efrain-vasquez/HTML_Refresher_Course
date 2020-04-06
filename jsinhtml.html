@@ -1,0 +1,71 @@
+<!-- Lets talk about workflow. Workflow is how you actually customize the HTML 
+both from the perspective of writing the HTML and CSS and also from the perspective 
+of how it looks on the web page. If your using Brackets as your text editor you can install
+an extension called Emmet which will improve your html and css workflow. Emmet you can write 
+the name of the tag and press tab and Emmet will complete the tag for you. 
+
+There are two JS libraries that we can add that will give our HTML some interesting features.
+The first is called highlight.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Go to this address https://highlightjs.org/ and click on get version "9.18.1" -->
+    <title>Customizing Your Html Workflow</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css"
+    />
+    <!-- Highlight.js loads here -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <!-- Mathjax loads here -->
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <!-- The documentation also says this: 
+    This will find and highlight code inside of <pre><code> tags; it tries to detect the language automatically. 
+    If automatic detection doesn’t work for you, you can specify the language in the class attribute: 
+    The pre tag rarely comes up usually inside of libraries.-->
+
+    <!-- This is an introduction to syntax highlighting. This is really helpful if you want to write 
+    blog posts about writing code. The highlight.js library is very useful for that. -->
+    <pre>
+        <code class="html">
+            <!-- class is a global attribute that you can add to any tag in html similar to the id property -->
+            &lt;p class="text" &gt; Look mom! Syntax highlighted text! &lt;/p&gt;
+        </code>
+    </pre>
+    <!-- This is a preview for CSS -->
+    <pre>
+        <code>
+            body {
+                background-color:blue;
+                font-family: 'Comic Sans', sans-serif;
+            }
+        </code>
+    </pre>
+
+    <p>
+      This is an equation displayed on its own line $$ \frac 1 2 $$
+    </p>
+    <p>
+      This is the quadratic formula in an in-line format: \( \frac {-b\pm
+      \sqrt{b ^ 2 - 4ac}} {2a} \)
+    </p>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <!-- When you refer to the usage documentation on at this address https://highlightjs.org/usage/ it says:
+    The bare minimum for using highlight.js on a web page is linking to the library along with one of the 
+    styles and calling initHighlightingOnLoad: -->
+  </body>
+</html>

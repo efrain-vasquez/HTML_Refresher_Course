@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Intro to Forms</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Intro to Forms</title>
   </head>
   <body>
     <!-- 
@@ -24,10 +24,12 @@
      -->
     <h1>Form Basics</h1>
     <form onsubmit="alert('Form is being submitted')">
-      <input type="text" placeholder="Search"/>
+      <input type="text" placeholder="Search" />
       <input type="Submit" value="Search" />
     </form>
-    <button onclick="console.log('Useless Button was clicked')">Useless Button</button>
+    <button onclick="console.log('Useless Button was clicked')">
+      Useless Button
+    </button>
     <!-- Remember to design your forms for accesibility in the context of a web page. -->
     <h1>Intermediate Forms</h1>
     <form>
@@ -52,19 +54,19 @@
       -->
       <input id="chedder" type="radio" />
       <label for="chedder">Chedder</label>
-      <br/>
-      <input id="moz" type="radio"/>
+      <br />
+      <input id="moz" type="radio" />
       <label for="moz">Mozzarella</label>
-      <br/>
-      <input id="goat" type="radio"/>
+      <br />
+      <input id="goat" type="radio" />
       <label for="goat">Goat Cheese</label>
       <!-- This is another way to create a label but it is not recommended for accessibility reasons. -->
-      <br/>
+      <br />
       <label>
         <input type="radio" />
         Blue Cheese
       </label>
-      <br/>
+      <br />
       <!-- A screen readers may be able to read the value of the form submit but it does not really have a detailed
       enough description associated with it. So for screen readers we can add another property called 
       aria-describedby="". This similar to the for="" attribute will accept the identifier of a descriptive element.
@@ -74,22 +76,29 @@
       inside of it. You can give your div an attribute of style="visibility:hidden" so that it will hide the 
       description for seeing users but still keep it available and accessible for screen readers.
        -->
-      <input type="submit" value="submit" aria-describedby="cheese-submit"/>
+      <input type="submit" value="submit" aria-describedby="cheese-submit" />
     </form>
 
     <div id="cheese-submit" style="visibility:hidden">
       <h2>Description for submit button</h2>
-      <p>Pressing the submit button will confirm your selection for your favorite cheese.</p>
+      <p>
+        Pressing the submit button will confirm your selection for your favorite
+        cheese.
+      </p>
     </div>
 
     <!-- To describe images to screen readers, images also have a special property the alt="" property. 
     The alt="" text of an image accomplishes two things, one is accessibility it allows screen readers 
     to describe the image and second it makes your image indexable by search engines. -->
-    <img alt="aerial view of angel of independence square" width="300" height="200" src="https://cdn.vox-cdn.com/thumbor/R46HcZUCP5bNVapldxkm8THzHGQ=/0x0:5478x3650/1200x900/filters:focal(2340x1210:3216x2086)/cdn.vox-cdn.com/uploads/chorus_image/image/63296335/GettyImages_1064650260.0.jpg" />
+    <img
+      alt="aerial view of angel of independence square"
+      width="300"
+      height="200"
+      src="https://cdn.vox-cdn.com/thumbor/R46HcZUCP5bNVapldxkm8THzHGQ=/0x0:5478x3650/1200x900/filters:focal(2340x1210:3216x2086)/cdn.vox-cdn.com/uploads/chorus_image/image/63296335/GettyImages_1064650260.0.jpg"
+    />
   </body>
 </html>
 
- 
 <!-- Begin example of Mailchimp Signup Form -->
 
 <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
@@ -127,7 +136,7 @@
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5ce08252efac3ff7ca3c342f2_5b32d5d974" tabindex="-1" value=""></div>
+<!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5ce08252efac3ff7ca3c342f2_5b32d5d974" tabindex="-1" value=""></div>
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
