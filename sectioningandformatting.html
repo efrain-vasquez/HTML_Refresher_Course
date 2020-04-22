@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sectioning and more Formatting Tags</title>
+  </head>
+  <body>
+    <!-- This is a mockup (a scaled down version of a full website) of a blog on healthy living -->
+    <!-- The header is generally a section where you expect certain elements of the section to be repeated throughout multiple pages. Such as a brand logo or a navigation bar which actually got its own tag in HTML5. You can add a nav tag in the header. A navigation is a special tag for navigation links which are generally unordered lists. -->
+    <header>
+      Brand logo in the <code>header</code>
+      <nav>
+        <ul>
+          <!-- Using CSS we could give these lists particular styles that would make them go across the page with the brand logo at the very left. -->
+          <li>Recipes</li>
+          <li>Blog</li>
+          <li>About</li>
+        </ul>
+      </nav>
+      <small>Limited time sale for 24 hours on vegetables</small>
+    </header>
+    <!-- These sectioning elements that are available to us are helpful to emphasize better readablility and better organization of our web documents. The main body of our document is found in the main tag. Inside this tag the main content of our web page is found.   -->
+    <main>
+      <!-- Lets say this is our home page. -->
+      <h1>Welcome to Healthy Living</h1>
+      <!-- Web designers and developers use to just create a div for everything and give them an id but now with HTML5 we structure and organize our content differently. Now we use section tags to divide up the content found in the main tag. It is possible to have multiple sections on the same page. You can have a nav tag inside a section and use it to navigate the section. You can also have form tags inside sections aswell as other tags. The way you divide up content using section tags and article tags is largely based on your intent as a designer or developer or author of the article. You can also have subsections inside of articles to divide up the content found in the article into subsections. An article is meant to be a self contained piece of information. Sections are meant to be logical dividers on your web page or even inside of an article.  -->
+      <section>
+        <h2>Check out our recipes</h2>
+        <nav>
+          <a href="#">Recipe 1</a>
+          <a href="#">Recipe 2</a>
+          <a href="#">Recipe 3</a>
+        </nav>
+      </section>
+      <section>
+        <h2>Featured Editorial Posts</h2>
+        <!-- The article tag is designed for content that is selfcontained -->
+        <article>
+          <!-- The details tag is simlilar to a spoiler tag where the main content
+          that actually shows up is maybe a title or headline and then you can
+          expand to view more details. to change the heading of this tag you can
+          place a summary tag in a details tag that will store the heading. You
+          can add an open by default you can add an open property to the details
+          tag. This property will shift the arrow downward instead of sideways
+          which will open the content by default. To highlight the title we can
+          also add special highlighting by using the tag mark to draw extra
+          attention to the summary tag causing a user to click on it. -->
+          <details open>
+            <summary>
+              <mark>An Apple a Day Keeps the Doctor Away</mark>
+            </summary>
+            The details of the content on how an apple a day keeps the doctor
+            away goes here. It turns out that eating an apple a day really does
+            keep the doctor away -- but you've got to eat the peel.
+          </details>
+        </article>
+        <details open>
+          <summary>
+            <mark>Can't you C How Rich Orange is in Vitamins?</mark>
+          </summary>
+          Oranges are a good source of several vitamins and minerals, especially
+          vitamin C, thiamine, folate, and potassium. Vitamin C. Oranges are an
+          excellent source of vitamin C. One large orange provides over 100% of
+          the RDI ( 4 ).
+        </details>
+        <article>
+          <details open>
+            <summary>
+              <mark>Blueberries - The Real Superfood</mark>
+            </summary>
+            Packed with antioxidants and phytoflavinoids, these berries are also
+            high in potassium and vitamin C, making them the top choice of
+            doctors and nutritionists. Not only can they lower your risk of
+            heart disease and cancer, they are also anti-inflammatory.
+          </details>
+        </article>
+      </section>
+      <!-- The aside tag is for content that is not necessarily part of the core content of your page but still important to include. -->
+      <aside>
+        <!-- The contenteditable attribute can be added to any tag and once it is added to a tag it makes it editable. Once the page is refreshed it reverts back to the original content, unless you add an event handler like onchange and then you tie that to some other functionality that makes it permanent.-->
+        <h3 contenteditable="true">Subscribe to our Newsletter</h3>
+        <form>
+          <input type="email" />
+          <input type="submit" value="subscribe" />
+        </form>
+      </aside>
+    </main>
+
+    <footer>
+      Copyright information in the <code>footer</code>
+      <br />
+      <a href="#">about</a>
+      <!-- terms of service -->
+      <a href="#">terms</a>
+      <a href="#">privacy</a>
+    </footer>
+  </body>
+</html>
